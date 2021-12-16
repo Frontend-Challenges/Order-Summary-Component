@@ -1,0 +1,156 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    --paleBlue: hsl(225, 100%, 94%);
+    --brightBlue: hsl(245, 75%, 52%);
+    --veryPaleBlue: hsl(225, 100%, 98%);
+    --desaturatedBlue: hsl(224, 23%, 55%);
+    --darkBlue: hsl(223, 47%, 23%);
+    --fontSizePrincipal: 1.6rem;
+    --fontFamilyPrincipal: 'Red Hat Display', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--paleBlue);
+    display: grid;
+    font-size: var(--fontSizePrincipal);
+    font-family: var(--fontFamilyPrincipal);
+    height: 100vh;
+    place-content: center;
+}
+
+/* Card */
+.summary-card {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: #fff;
+    clip-path: circle(100.0% at 50% 50%);
+    margin: 0 auto;
+    padding-bottom: 1.8rem;
+    width: 90%;
+}
+
+.summary-card__image {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    max-width: 100%;
+}
+
+.summary-card__body {
+    margin-top: 1.8rem;
+    text-align: center;
+}
+
+.summary-card__title {
+    font-size: 2.4rem;
+    font-weight: 900;
+}
+
+.inner {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 1.6rem;
+}
+
+.summary-card__text {
+    font-weight: 500;
+    color: var(--desaturatedBlue);
+    line-height: 1.5;
+}
+
+.summary-card__center,
+.summary-card__bottom {
+    margin-top: 1.6rem;
+    padding: 0 1.8rem;
+}
+
+/* Plan */
+.plan {
+    align-items: center;
+    border-radius: .8rem;
+    background-color: var(--veryPaleBlue);
+    display: flex;
+    gap: 1.8rem;
+    padding: 2.4rem;
+}
+
+.plan__date {
+    font-weight: 900;
+}
+
+.plan__quantity {
+    color: var(--desaturatedBlue);
+}
+
+.plan__change {
+    color: var(--brightBlue);
+    font-weight: 900;
+    margin-left: auto;
+    word-break: break-all;
+}
+
+/* Button */
+.button:link,
+.button:visited,
+.button {
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.button--payment {
+    background-color: var(--brightBlue);
+    box-shadow: 0 1.2rem 2.4rem rgba(56, 41, 224, 0.5);
+    border-radius: 1rem;
+    color: #fff;
+    font-family: var(--fontFamilyPrincipal);
+    font-weight: 900;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1.5rem 3rem;
+    margin-top: .8rem;
+    width: 100%;
+}
+
+.button--cancel-order{
+    background: none;
+    color: var(--desaturatedBlue);
+    font-family: var(--fontFamilyPrincipal);
+    font-weight: 900;
+    font-size: 1.6rem;
+    margin-top: 1.8rem;
+    padding: 1.5rem 3rem;
+    width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+    .summary-card {
+        width: 45rem;
+    }
+
+    .summary-card__center,
+    .summary-card__bottom {
+        padding: 0 3.8rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .summary-card {
+        padding-bottom: 3.2rem;
+    }
+
+    .summary-card__title {
+        font-size: 3rem;
+    }
+}

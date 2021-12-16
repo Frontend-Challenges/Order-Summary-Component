@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Frontend Mentor | Order summary card</title>
+</head>
+<body>
+  <div class="summary-card">
+    <object type="image/svg+xml" data="./images/illustration-hero.svg" class="summary-card__image">
+      Hero logo
+    </object>
+    <div class="summary-card__body">
+      <h3 class="summary-card__title">
+        Order summary
+      </h3>
+      <div class="inner">
+        <p class="summary-card__text">
+          You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!
+        </p>
+      </div>
+    </div>
+    <div class="summary-card__center">
+      <div class="plan">
+        <object type="image/svg+xml" data="./images/icon-music.svg" class="plan__icon">
+          Icon music
+        </object>
+        <div class="plan__price">
+          <p class="plan__date">
+            Annual Plan
+          </p>
+          <p class="plan__quantity">
+            $59.99/year
+          </p>
+        </div>
+        <a class="plan__change" href="#">Change</a>
+      </div>
+    </div>
+    <div class="summary-card__bottom">
+      <button class="button button--payment">Proceed to payment</button>
+      <button class="button button--cancel-order">Cancel order</button>
+    </div>
+  </div>
+</body>
+</html>
